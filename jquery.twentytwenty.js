@@ -145,6 +145,8 @@
       }
 
       $(window).trigger("resize.twentytwenty");
+      
+      $(window).on("slidein", function(e,pct){ $({slide:0}).animate({slide:pct}, { duration: 1000, step: function(val){ adjustSlider(val/100) } }) });
     });
   };
 
